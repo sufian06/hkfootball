@@ -27,6 +27,13 @@ class ApiClient {
   async getAPlayer(id) {
     return this.fetch(`/players/${id}`);
   }
+
+  async createplayer(videoData) {
+    return this.fetch("/players", {
+      method: "POST",
+      body: videoData,
+    });
+  }
 }
 
 export const apiClient = new ApiClient();

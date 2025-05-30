@@ -17,7 +17,7 @@ const Player = ({ player }) => {
             {player.jersyNumber}
           </h2>
           <div className="flex flex-col items-center">
-            <h3 className="text-5xl font-bold">{player.name}</h3>
+            <h3 className="text-5xl font-bold capitalize">{player.name}</h3>
             <h4 className="capitalize">{player.position}</h4>
           </div>
         </div>
