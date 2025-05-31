@@ -34,6 +34,13 @@ class ApiClient {
       body: videoData,
     });
   }
+
+  async createMatch(matchData) {
+    return this.fetch("/matches", {
+      method: "POST",
+      body: matchData,
+    });
+  }
 }
 
 export const apiClient = new ApiClient();

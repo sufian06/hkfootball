@@ -1,5 +1,6 @@
 import UserModel from "@/models/Users";
 import bcrypt from "bcryptjs";
+import CredentialsProvider from "next-auth/providers/credentials";
 import connectMongo from "./mongodb";
 
 export const authOptions = {

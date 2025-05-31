@@ -14,7 +14,7 @@ const scorerSchema = new Schema({
 
 const matchSchema = new Schema(
   {
-    oponentTeamName: { type: String },
+    oponentTeamName: { type: String, default: "Oponent Team" },
     oponentTeamGoals: { type: Number, required: true },
     homeTeamGoals: { type: Number, required: true },
 
