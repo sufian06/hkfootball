@@ -8,8 +8,8 @@ const PlayerCard = ({ player }) => {
       <Link href={`/player/${player._id}`}>
         <div>
           <Image
-            className="w-full px-6"
-            src="/images/mbappe.webp"
+            className="w-full h-72 px-6"
+            src={player.avatar !== "" ? player.avatar : "/images/mbappe.webp"}
             alt={name}
             width={200}
             height={200}
@@ -19,7 +19,9 @@ const PlayerCard = ({ player }) => {
           <div className="flex items-center gap-1.5 text-white p-3 pb-0">
             <div className="text-[68px] font-bold">{jersyNumber}</div>
             <div className="flex flex-col gap-0">
-              <h3 className="text-2xl font-bold leading-5">{name}</h3>
+              <h3 className="text-2xl font-bold leading-5 capitalize">
+                {name}
+              </h3>
               <p className="text-lg capitalize">{position}</p>
             </div>
           </div>

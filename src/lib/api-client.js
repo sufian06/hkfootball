@@ -20,6 +20,27 @@ class ApiClient {
     return response.json();
   }
 
+  async fetchFormData(endpoint, options = {}) {
+    const { method = "POST", body, headers = {} } = options;
+
+    const defaultHeaders = {
+      "Content-Type": FormData,
+      ...headers,
+    };
+
+    const response = await fetch(`/api${endpoint}`, {
+      method,
+      headers: defaultHeaders,
+      body: body ? JSON.stringify(body) : undefined,
+    });
+
+    if (!response.ok) {
+      throw new Error(await response.text());
+    }
+
+    return response.json();
+  }
+
   async getPlayers() {
     return this.fetch("/players");
   }
@@ -30,6 +51,12 @@ class ApiClient {
 
   async createplayer(videoData) {
     return this.fetch("/players", {
+      method: "POST",
+      body: videoData,
+    });
+  }
+  async createPlayerWithImage(videoData) {
+    return this.fetchFormData("/players", {
       method: "POST",
       body: videoData,
     });

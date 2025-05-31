@@ -9,6 +9,8 @@ const PlayerSchema = new mongoose.Schema(
     position: { type: String, required: true },
     goalConceded: { type: Number, default: 0 },
     saves: { type: Number, default: 0 },
+    avatar: { type: String, default: "" },
+    coverImage: { type: String, default: "" },
   },
   {
     timestamps: true,

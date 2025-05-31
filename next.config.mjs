@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [new URL("https://cdn.britannica.com/**")],
+    remotePatterns: [new URL("https://res.cloudinary.com/**")],
   },
 };
 

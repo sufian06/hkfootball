@@ -1,3 +1,5 @@
+"use client";
+
 import PlayerCreateForm from "@/components/forms/PlayerCreateForm";
 
 const AddPlayerPage = () => {

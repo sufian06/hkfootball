@@ -1,15 +1,14 @@
 import Image from "next/image";
 
 const Player = ({ player }) => {
+  const { coverImage } = player;
+
   return (
     <div className="flex flex-col lg:flex-row justify-evenly items-center gap-8 bg-radial-[at_50%] from-white to-indigo-600 to-90%">
       <div>
-        <Image
-          src="/images/mbappe.webp"
-          alt="player name"
-          width={500}
-          height={500}
-        />
+        {coverImage ? (
+          <Image src={coverImage} alt="player name" width={500} height={500} />
+        ) : null}
       </div>
       <div className="flex flex-col gap-y-6">
         <div className="flex items-center gap-6">
