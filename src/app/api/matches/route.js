@@ -22,6 +22,7 @@ export async function POST(req) {
       oponentTeamGoals,
       homeTeamGoals,
       players,
+      scorers,
     });
 
     // played match increment

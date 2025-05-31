@@ -18,7 +18,12 @@ const matchSchema = new Schema(
     oponentTeamGoals: { type: Number, required: true },
     homeTeamGoals: { type: Number, required: true },
 
-    scorers: [scorerSchema],
+    scorers: [
+      {
+        playerId: { type: mongoose.Schema.Types.ObjectId, ref: "Player" },
+        goals: Number,
+      },
+    ],
   },
   { timestamps: true }
 );

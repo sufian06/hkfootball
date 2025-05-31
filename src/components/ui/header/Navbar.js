@@ -16,7 +16,9 @@ const Navbar = () => {
               <li>
                 <Link href={"/player"}>all players</Link>
               </li>
-              <li>one</li>
+              <li>
+                <Link href={"/match/add"}>addMatch</Link>
+              </li>
             </ul>
           </div>
           <div className="border-2 rounded-lg cursor-pointer border-[#14142B] py-2 px-4">

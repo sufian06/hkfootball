@@ -1,5 +1,11 @@
+import MatchCreateForm from "@/components/forms/MatchCreateForm";
+
 const PlayerAddPage = () => {
-  return <div></div>;
+  return (
+    <div>
+      <MatchCreateForm />
+    </div>
+  );
 };
 
 export default PlayerAddPage;

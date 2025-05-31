@@ -2,6 +2,7 @@
 
 import { apiClient } from "@/lib/api-client";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 function PlayerCreateForm() {
   const { handleSubmit, register } = useForm({
@@ -15,6 +16,8 @@ function PlayerCreateForm() {
   const onSubmit = async (data) => {
     try {
       await apiClient.createplayer(data);
+      toast.success("Player Added");
+      reset();
     } catch (error) {}
   };
 
