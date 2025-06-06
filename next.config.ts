@@ -9,6 +9,6 @@ export default nextConfig;
 // next.config.js
 module.exports = {
   images: {
-    domains: ["img.daisyui.com"],
+    domains: ["res.cloudinary.com", "img.daisyui.com"],
   },
 };
